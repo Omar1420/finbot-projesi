@@ -1,0 +1,156 @@
+/* src/App.css - NİHAİ GÖRSEL TASARIM CSS Sınıfları */
+
+/* --- KARANLIK MOD DEĞİŞKENLERİ --- */
+:root {
+  /* Aydınlık Mod (Varsayılan) - Yumuşak Tonlar */
+  --bg-primary: #f8f9fa; /* Çok Açık Gri Arka Plan */
+  --bg-card: #ffffff; /* Beyaz Kartlar */
+  --text-primary: #212529; /* Koyu Gri Metin */
+  --text-secondary: #6c757d; /* İkincil Metin */
+  --border-color: #dee2e6; /* Açık Gri Kenarlık */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --main-accent-color: #007bff; /* Mavi (Grafik ve Buton için) */
+}
+
+[data-theme='dark'] {
+  /* Karanlık Mod - Gözü Yorucu Olmayan Koyu Tonlar */
+  --bg-primary: #121212; /* Çok Koyu Gri (Arka Plan) */
+  --bg-card: #1e1e1e; /* Koyu Kartlar */
+  --text-primary: #e0e0e0; /* Açık Gri Metin */
+  --text-secondary: #aaaaaa; /* Yumuşak İkincil Metin */
+  --border-color: #333333; /* Koyu Gri Kenarlık */
+  --shadow-color: rgba(255, 255, 255, 0.05);
+  --main-accent-color: #9cb2ff; /* Açık Mavi (Grafik ve Buton için) */
+}
+
+/* --- GLOBAL STİLLER --- */
+body {
+  background-color: var(--bg-primary); 
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-primary); 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.app-container {
+  min-height: 100vh;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- KART VE BAŞLIK STİLLERİ --- */
+.header-card {
+  background-color: var(--bg-card);
+  box-shadow: 0 4px 10px var(--shadow-color);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+.main-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+.section-card {
+  background-color: var(--bg-card);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  border: 1px solid var(--border-color); 
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+/* KART İÇİ METİN RENGİ */
+.card-label, .card-value {
+    color: var(--text-secondary);
+}
+.card-value {
+    color: var(--text-primary);
+}
+
+/* --- INPUT VE BUTON STİLLERİ --- */
+.input-style {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--bg-card); 
+  color: var(--text-primary);
+}
+.button-style {
+  padding: 12px 20px;
+  background-color: var(--main-accent-color); /* Accent renk */
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* --- SİNYAL KART RENKLERİ (Yumuşak Kontrast) --- */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Tüm Kartlara Uygulanacak Genel Sinyal Stili */
+.data-card {
+  padding: 18px; 
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease;
+  background-color: var(--bg-card);
+}
+
+/* YEŞİL - İYİ */
+.sinyal-green {
+  background-color: #0c9b4e; /* Daha koyu ama yumuşak yeşil */
+  color: white !important; 
+  border: 1px solid #0c9b4e;
+}
+.sinyal-green .card-label, .sinyal-green .card-value {
+    color: white !important;
+}
+
+/* KIRMIZI - KÖTÜ */
+.sinyal-red {
+  background-color: #d1414e; /* Koyu fuşya-kırmızı (daha az neon) */
+  color: white !important;
+  border: 1px solid #d1414e;
+}
+.sinyal-red .card-label, .sinyal-red .card-value {
+    color: white !important;
+}
+
+/* SARI - ORTA */
+.sinyal-sari {
+  background-color: #e6b800; /* Daha koyu, daha az parlak sarı */
+  color: #111 !important; /* Metni siyah tutuyoruz */
+  border: 1px solid #e6b800;
+}
+.sinyal-sari .card-label, .sinyal-sari .card-value {
+    color: #111 !important;
+}
+
+/* NÖTR / DİĞER KARTLAR */
+.sinyal-neutral {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}

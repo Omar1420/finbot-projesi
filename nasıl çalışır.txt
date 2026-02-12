@@ -1,0 +1,40 @@
+FinBot Uygulaması: Çalıştırma Komutları
+
+Bu talimatlar, uygulamanın sorunsuz çalışması için iki ayrı Komut İstemi (CMD) penceresinde sırayla uygulanmalıdır.
+
+1. Backend (API Servisi) Çalıştırma (1. CMD Penceresi)
+
+Amaç: API'yi http://localhost:8000 adresinde sanal ortam (venv) içinde başlatmak.
+
+Backend Klasörüne Git:
+
+cd C:\Users\omar\Desktop\FinBot
+
+
+Sanal Ortamı Aktive Et:
+
+.\venv\Scripts\activate
+
+
+API Sunucusunu Başlat:
+
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+
+(Bu pencereyi arka planda açık tutun.)
+
+2. Frontend (React Uygulaması) Çalıştırma (2. CMD Penceresi)
+
+Amaç: React uygulamasını başlatmak (http://localhost:3000).
+
+Frontend Klasörüne Git:
+
+cd C:\Users\omar\Desktop\FinBot\finbot-frontend
+
+
+Uygulamayı Başlat:
+
+npm start
+
+
+(Tarayıcınız otomatik olarak açılacaktır.)
